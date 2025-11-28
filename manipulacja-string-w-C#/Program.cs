@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("1. Zamiana wielkości liter");
+                Console.WriteLine("1. Zamiana wielkości liter");
             Console.WriteLine("\nNapisz dowolne zdanie: ");
             string zdanieUzytownika = Console.ReadLine();
             int iloscLiterWZdaniuUzytkownika = zdanieUzytownika.Length;
@@ -14,8 +14,7 @@
                 "Twoje zdanie w Wiekich Literach: " + zdanieUzytkownikaWWielkichLiterach + ".\n" +
                 "Twoje zdanie w małych literach: " + zdanieUzytkownikaWMalychLiterach + ".");
 
-            Console.WriteLine("1.1");
-            Console.WriteLine("1. Zamiana wielkości liter");
+                Console.WriteLine("1.1");
             Console.WriteLine("\nNapisz dowolne zdanie: ");
             string zdanieUzytownika2 = Console.ReadLine();
             Console.WriteLine("Wybierz zmiane zdania: up, low, 1-up");
@@ -40,18 +39,73 @@
             }
 
 
-            Console.WriteLine("2. Długość tekstu i pierwsza/ostatnia litera");
+                Console.WriteLine("2. Długość tekstu i pierwsza/ostatnia litera");
             Console.WriteLine("Napisz coś: ");
             string wpisUzytkownika = Console.ReadLine();
 
+            string wpisUzytkownikaBezSpacji = wpisUzytkownika.Trim();
             int dlugoscWpisuUzytkownika = wpisUzytkownika.Length;
             string pierwszaLiteraWpisu = wpisUzytkownika.Substring(0, 1);
-            string ostatniaLiteraWpisu = wpisUzytkownika.Substring( 1);
+            string ostatniaLiteraWpisu = wpisUzytkownika.Substring(wpisUzytkownika.Length -1, 1);
 
-            Console.WriteLine("Wpisałes: " + wpisUzytkownika);
+            Console.WriteLine("Wpisałes: " + wpisUzytkownikaBezSpacji);
             Console.WriteLine("Długość " + dlugoscWpisuUzytkownika);
             Console.WriteLine("Pierwsza litera: " + pierwszaLiteraWpisu);
             Console.WriteLine("Ostatnia litera: " + ostatniaLiteraWpisu);
+
+
+
+                Console.WriteLine("3. Liczenie wystąpień znaku");
+            Console.WriteLine("Napisz cos");
+            string wpis3 = Console.ReadLine();
+            Console.WriteLine("Napisz jakiego znaku szukasz w swoim wpisie:");
+            char szukanyZnak = Console.ReadKey().KeyChar;
+            int licznik = 0;
+            for (int i = 0; i < wpis3.Length; i++)
+            {
+                if (wpis3[i] == szukanyZnak)
+                {
+                    licznik++;
+                }
+            }
+
+            Console.WriteLine("\ntekst: " + wpis3);
+            Console.WriteLine("znak: " + szukanyZnak);
+            Console.WriteLine("Znak '" + szukanyZnak + "' wystepuje " + licznik + " razy.");
+
+
+
+                Console.WriteLine("4. Zamiana spacji na podkreślniki");
+            Console.WriteLine("Napisz coś: ");
+            string wpisUzytkownika4 = Console.ReadLine();
+            Console.WriteLine("Co chcesz zastąpić?");
+            string wpis4_2 = Console.ReadLine();
+            Console.WriteLine("Co ma zastąpić " + wpis4_2 + "?");
+            string wpis4_1 = Console.ReadLine();
+            string zmieniony = wpisUzytkownika4.Replace(wpis4_2, wpis4_1);
+            Console.WriteLine(zmieniony);
+
+
+
+                Console.WriteLine("5. Odwracanie tekstu");
+            Console.WriteLine("Napisz coś: ");
+            string wpisUzytkownika5 = Console.ReadLine();
+
+            for (int i = wpisUzytkownika5.Length - 1; i >= 0; i--)
+            {
+                Console.Write(wpisUzytkownika5[i]);
+            }
+
+
+                Console.WriteLine("\n7. Licznik słów");
+            Console.WriteLine("Napisz coś: ");
+            string wpis6 = Console.ReadLine();
+            string wpisBezSpacji6 = wpis6.Trim();
+            string[] podzielonyWpis6 = wpisBezSpacji6.Split(" ");
+            int ileMaSlow = podzielonyWpis6.Length;
+            Console.WriteLine("Wejście: " + wpis6);
+            Console.WriteLine("Wyjście: " + ileMaSlow);
+
 
 
 
