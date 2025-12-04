@@ -137,7 +137,7 @@
                 Console.WriteLine("8. Generator akronimów");
             string wpis8 = Console.ReadLine();
             string[] podzielonyWpis8 = wpis8.Split(' ');
-            string w = "";
+            string akronim = "";
 
             foreach (int i = 0; i >= 0; i++)
             {
