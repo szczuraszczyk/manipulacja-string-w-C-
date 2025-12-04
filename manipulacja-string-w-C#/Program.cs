@@ -97,18 +97,55 @@
             }
 
 
-                Console.WriteLine("\n7. Licznik słów");
+
+            Console.WriteLine("6. Czy palindrom?");
+            Console.WriteLine("Wpisz coś a ja sprawdze czy tulipan");
+            string palindrom = Console.ReadLine();
+            bool czyPalindrom = true;
+
+            for (int i = (palindrom.Length - 1) / 2; i >= 0; i--)
+            {
+                if (palindrom[i] != palindrom[palindrom.Length - 1 - i])
+                {
+                    czyPalindrom = false;
+                    break;
+                }
+            }
+
+            if (czyPalindrom)
+            {
+                Console.WriteLine(palindrom + " jest palindromem");
+            }
+            else
+            {
+                Console.WriteLine("To nie bedzie palindrom");
+
+            }
+            Console.WriteLine();
+            Console.WriteLine("Wpisz słowa a ja ci policze");
+            string podaneSlowa = Console.ReadLine();
+            string[] ileSlowa = podaneSlowa.Split(" ");
+
+
+
+            Console.WriteLine("\n7. Licznik słów");
             Console.WriteLine("Napisz coś: ");
-            string wpis6 = Console.ReadLine();
-            string wpisBezSpacji6 = wpis6.Trim();
-            string[] podzielonyWpis6 = wpisBezSpacji6.Split(" ");
-            int ileMaSlow = podzielonyWpis6.Length;
-            Console.WriteLine("Wejście: " + wpis6);
+            string wpis7 = Console.ReadLine();
+            string wpisBezSpacji7 = wpis7.Trim();
+            string[] podzielonyWpis7 = wpisBezSpacji7.Split(" ");
+            int ileMaSlow = podzielonyWpis7.Length;
+            Console.WriteLine("Wejście: " + wpis7);
             Console.WriteLine("Wyjście: " + ileMaSlow);
 
 
+                Console.WriteLine("8. Generator akronimów");
+            string wpis8 = Console.ReadLine();
+            string[] podzielonyWpis8 = wpis8.Split(' ');
 
-
+            foreach (int i = 0; i >= 0; i++)
+            {
+                ggg
+            }
         }
     }
 }
