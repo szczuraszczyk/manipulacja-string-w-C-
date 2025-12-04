@@ -142,9 +142,9 @@
             string wpis8 = Console.ReadLine();
             string[] podzielonyWpis8 = wpis8.Split(' ');
 
-            for (int i = 0; i >= 0; i++)
+            foreach (int i = 0; i >= 0; i++)
             {
-                
+                ggg
             }
         }
     }
