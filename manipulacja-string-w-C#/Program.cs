@@ -121,10 +121,6 @@
                 Console.WriteLine("To nie bedzie palindrom");
 
             }
-            Console.WriteLine();
-            Console.WriteLine("Wpisz słowa a ja ci policze");
-            string podaneSlowa = Console.ReadLine();
-            string[] ileSlowa = podaneSlowa.Split(" ");
 
 
 
@@ -141,10 +137,11 @@
                 Console.WriteLine("8. Generator akronimów");
             string wpis8 = Console.ReadLine();
             string[] podzielonyWpis8 = wpis8.Split(' ');
+            string w = "";
 
             foreach (int i = 0; i >= 0; i++)
             {
-
+                
             }
         }
     }
